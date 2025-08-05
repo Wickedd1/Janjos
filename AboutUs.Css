@@ -1,0 +1,114 @@
+:root {
+    --gradient-ocean: linear-gradient(to bottom right, #0b1f3a, #003366);
+    --sunset-gold: #fca311;
+    --container-max-width: 1200px;
+    --transition-quick: 0.3s ease;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--gradient-ocean);
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-hero {
+    background: url('resort-bg.jpg') center/cover no-repeat;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 1rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.about-title span {
+    color: var(--sunset-gold);
+}
+
+.about-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.about-content {
+    padding: 4rem 2rem;
+    background: var(--gradient-ocean);
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.about-box {
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+}
+
+.section-heading {
+    color: var(--sunset-gold);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-box p {
+    line-height: 1.7;
+}
+
+.offerings-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.offerings-list li {
+    margin-bottom: 0.7rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.offerings-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--sunset-gold);
+}
